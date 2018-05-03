@@ -1,6 +1,6 @@
 
 Classic Arcade Game Clone
-===============================
+=========================
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ Classic Arcade Game Clone
 ## Rules
 In this game, you have a Player and Enemies (bugs). The goal of the player is to reach the water, without colliding into any one of the enemies. The player can move **left**, **right**, **up** and **down**. The enemies move at varying speeds on the paved block portion of the scene. 
 
-Each time the player reaches the water the game is won and you get one additional point. If the player collides with an enemy, the player moves back to its initial position and you get a penalty one point.
+Each time the player reaches the water your score is added one point, but if the player collides with an enemy your score is deducted one point.
 
 ## Technical
 - This game includes the following files:
