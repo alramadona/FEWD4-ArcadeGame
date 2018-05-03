@@ -3,7 +3,7 @@
 class GameCharacter {
 
     constructor(sprite, posX, posY) {
-        this.sprite = sprite; // game character image
+        this.sprite = sprite;
         this.posX = posX;
         this.posY = posY;
     }
@@ -27,7 +27,7 @@ class GameCharacter {
 
 }
 
-// GameCharacter subclass - represents the enemy in the game
+// GameCharacter subclass - the enemy
 class Enemy extends GameCharacter{
     
     constructor(posX, posY, speed){
@@ -62,14 +62,14 @@ class Enemy extends GameCharacter{
     
 }
 
-// GameCharacter subclass - represents the player in the game
+// GameCharacter subclass - the player
 class Player extends GameCharacter{
     
     constructor(posX = 200, posY = 405){
         super('images/char-boy.png', posX, posY);
         this.reachedWater = false;
+        this.winningStarTime = -1
         this.score = 0;
-        this.winningStarTime = -1 // flag to hold the winning star rendering
     }
     
     // updates the score of the player
@@ -171,7 +171,7 @@ class Player extends GameCharacter{
     }
     
     // checks if the player collides with an enemy, reference: 
-    // developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+    // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
     didPlayerCollideWithEnemy() {
         let enemyDimension = {};
         let playerDimension = {
